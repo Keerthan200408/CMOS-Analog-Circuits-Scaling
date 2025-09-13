@@ -1,0 +1,21 @@
+* Testbench for Cascode Amplifier
+.INCLUDE "tsmc_spice_180nm.lib"
+.INCLUDE "Cascode_Amplifier.spice"
+
+* Voltage sources
+VDD vdd 0 1.8
+Vbias1 vbias1 0 1.11; change vbias1, vbias2, vbias3 as per your requirements
+Vbias2 vbias2 0 0.911
+Vbias3 vbias3 0 0.865
+Vin vin 0 SIN(0.6955 0.1 500k) ; Input sine wave with 0.1V amplitude and 500kHz frequency
+
+* Simulation control
+.TRAN 100p 10u ; Transient analysis with 100ps step size for 10us total time
+
+.control
+run
+plot vin
+plot vout
+.endc
+
+.end

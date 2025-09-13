@@ -1,0 +1,23 @@
+timestamp 1731145861
+version 8.3
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "gnd" 1338 6580 -23 -143 ppc 90 38 96 96 0 0 0 0 0 0 0 0 252 134 0 0 0 0
+node "vin" 212 5432 -1 -129 pc 0 0 0 0 44 44 0 0 0 0 0 0 64 40 0 0 0 0
+node "a_n10_n90#" 157 7520 -10 -90 ndc 180 76 0 0 0 0 0 0 0 0 0 0 192 104 0 0 0 0
+node "vbias3" 212 7876 -1 -95 pc 0 0 0 0 44 44 0 0 0 0 0 0 116 66 0 0 0 0
+node "vout" 189 7332 1 -90 ndiff 90 38 216 66 0 0 0 0 0 0 0 0 220 118 0 0 0 0
+node "vbias2" 381 0 -3 -56 pc 0 0 0 0 72 72 0 0 0 0 0 0 88 52 0 0 0 0
+node "a_n10_n51#" 475 0 -10 -51 pdiff 0 0 432 132 0 0 0 0 0 0 0 0 308 162 0 0 0 0
+node "vbias1" 381 0 -3 1 pc 0 0 0 0 72 72 0 0 0 0 0 0 92 54 0 0 0 0
+node "vdd" 4986 0 -33 -59 nw 96 96 216 66 0 0 0 0 0 0 0 0 232 124 0 0 7150 350
+cap "a_n10_n51#" "vdd" 9212
+cap "vout" "vdd" 1504
+cap "vdd" "vbias2" 6560
+cap "vbias1" "vdd" 6748
+device mosfet nfet -1 -124 0 -123 2 10 "Gnd!" "vin" 4 0 "gnd" 10 0 "a_n10_n90#" 10 0
+device mosfet nfet -1 -90 0 -89 2 10 "Gnd!" "vbias3" 4 0 "a_n10_n90#" 10 0 "vout" 10 0
+device mosfet pfet -1 -51 0 -50 2 24 "vdd" "vbias2" 4 0 "a_n10_n51#" 24 0 "vout" 24 0
+device mosfet pfet -1 6 0 7 2 24 "vdd" "vbias1" 4 0 "vdd" 24 0 "a_n10_n51#" 24 0

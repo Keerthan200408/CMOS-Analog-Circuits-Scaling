@@ -1,0 +1,42 @@
+* SPICE3 file created from Cascode_Current_Mirror.ext - technology: scmos
+
+.option scale=1u
+
+M1000 a_46_n11# vbiasp vdd vdd pfet w=24 l=2
++  ad=240 pd=68 as=808 ps=254
+M1001 a_40_n53# vbias4 gnd Gnd nfet w=10 l=2
++  ad=140 pd=68 as=245 ps=126
+M1002 vbias3 vbias3 gnd Gnd nfet w=5 l=2
++  ad=35 pd=24 as=0 ps=0
+M1003 vbias1 vbias3 a_113_n53# Gnd nfet w=10 l=2
++  ad=70 pd=34 as=140 ps=68
+M1004 vbias3 vbiasp vdd vdd pfet w=24 l=2
++  ad=240 pd=68 as=0 ps=0
+M1005 a_102_n11# vbias1 vdd vdd pfet w=24 l=2
++  ad=456 pd=134 as=0 ps=0
+M1006 vbias2 vbias3 a_73_n53# Gnd nfet w=10 l=2
++  ad=70 pd=34 as=140 ps=68
+M1007 a_113_n53# vbias4 gnd Gnd nfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1008 a_73_n53# vbias4 gnd Gnd nfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1009 a_46_n11# vbias3 a_40_n53# Gnd nfet w=10 l=2
++  ad=70 pd=34 as=0 ps=0
+M1010 vbias1 vbias2 a_102_n11# vdd pfet w=24 l=2
++  ad=240 pd=68 as=0 ps=0
+M1011 vbias2 vbias2 vdd vdd pfet w=20 l=5
++  ad=180 pd=58 as=0 ps=0
+C0 vbias2 vdd 21.75fF
+C1 vdd vbias3 3.95fF
+C2 vdd a_46_n11# 3.95fF
+C3 vdd vbiasp 23.47fF
+C4 vdd vbias1 30.55fF
+C5 vdd a_102_n11# 21.81fF
+C6 vbias4 Gnd 36.97fF
+C7 a_113_n53# Gnd 7.52fF
+C8 a_73_n53# Gnd 7.52fF
+C9 a_40_n53# Gnd 7.52fF
+C10 gnd Gnd 39.67fF
+C11 vbias1 Gnd 2.07fF
+C12 vbias2 Gnd 2.07fF
+C13 vbias3 Gnd 54.85fF

@@ -1,0 +1,38 @@
+timestamp 1731229290
+version 8.3
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "vbias4" 971 36968 47 -106 p 0 0 0 0 216 192 0 0 0 0 0 0 492 270 0 0 0 0
+node "a_113_n53#" 163 7520 113 -53 ndc 140 68 0 0 0 0 0 0 0 0 0 0 240 128 0 0 0 0
+node "a_73_n53#" 163 7520 73 -53 ndc 140 68 0 0 0 0 0 0 0 0 0 0 240 128 0 0 0 0
+node "a_40_n53#" 163 7520 40 -53 ndc 140 68 0 0 0 0 0 0 0 0 0 0 240 128 0 0 0 0
+node "gnd" 4072 39668 0 -118 ppc 245 126 256 256 0 0 0 0 0 0 0 0 1240 628 0 0 0 0
+node "a_102_n11#" 461 0 102 -11 pdiff 0 0 456 134 0 0 0 0 0 0 0 0 496 256 0 0 0 0
+node "vbias1" 577 2068 113 -11 pdiff 70 34 240 68 82 78 0 0 0 0 0 0 680 348 0 0 0 0
+node "vbias2" 782 2068 75 -20 pc 70 34 180 58 274 174 0 0 0 0 0 0 336 184 0 0 0 0
+node "a_46_n11#" 182 7312 46 -11 pdiff 70 34 240 68 0 0 0 0 0 0 0 0 184 100 308 162 0 0
+node "vbias3" 1409 54854 4 -42 pc 35 24 240 68 288 248 0 0 0 0 0 0 888 476 0 0 0 0
+node "vbiasp" 891 0 1 -16 pc 0 0 0 0 188 172 0 0 0 0 0 0 328 180 0 0 0 0
+node "vdd" 10809 0 -17 -32 nw 352 352 808 254 0 0 0 0 0 0 0 0 1116 566 0 0 14560 556
+cap "vdd" "a_46_n11#" 3948
+cap "vbias3" "a_46_n11#" 720
+cap "vbias1" "vdd" 30554
+cap "vdd" "vbiasp" 23468
+cap "vdd" "vbias2" 21750
+cap "vdd" "vbias3" 3948
+cap "vdd" "a_102_n11#" 21808
+device mosfet nfet 120 -91 121 -90 2 10 "Gnd!" "vbias4" 4 0 "gnd" 10 0 "a_113_n53#" 10 0
+device mosfet nfet 80 -91 81 -90 2 10 "Gnd!" "vbias4" 4 0 "gnd" 10 0 "a_73_n53#" 10 0
+device mosfet nfet 47 -91 48 -90 2 10 "Gnd!" "vbias4" 4 0 "gnd" 10 0 "a_40_n53#" 10 0
+device mosfet nfet 120 -53 121 -52 2 10 "Gnd!" "vbias3" 4 0 "a_113_n53#" 10 0 "vbias1" 10 0
+device mosfet nfet 80 -53 81 -52 2 10 "Gnd!" "vbias3" 4 0 "a_73_n53#" 10 0 "vbias2" 10 0
+device mosfet nfet 47 -53 48 -52 2 10 "Gnd!" "vbias3" 4 0 "a_40_n53#" 10 0 "a_46_n11#" 10 0
+device mosfet nfet 8 -50 9 -49 2 5 "Gnd!" "vbias3" 4 0 "gnd" 5 0 "vbias3" 5 0
+device mosfet pfet 152 -11 153 -10 2 24 "vdd" "vbias1" 4 0 "vdd" 24 0 "a_102_n11#" 24 0
+device mosfet pfet 111 -11 112 -10 2 24 "vdd" "vbias2" 4 0 "a_102_n11#" 24 0 "vbias1" 24 0
+device mosfet pfet 75 -11 76 -10 5 20 "vdd" "vbias2" 10 0 "vdd" 20 0 "vbias2" 20 0
+device mosfet pfet 44 -11 45 -10 2 24 "vdd" "vbiasp" 4 0 "vdd" 24 0 "a_46_n11#" 24 0
+device mosfet pfet 5 -11 6 -10 2 24 "vdd" "vbiasp" 4 0 "vdd" 24 0 "vbias3" 24 0
+subcap "a_46_n11#" -7312
